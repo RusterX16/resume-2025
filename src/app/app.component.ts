@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ExperienceListComponent } from "./experience-list/experience-list.component";
+import { EducationListComponent } from './education-list/education-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ExperienceListComponent, EducationListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

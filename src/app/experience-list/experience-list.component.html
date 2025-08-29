@@ -1,0 +1,7 @@
+@if (list.length) {
+  @for (e of list; track $index) {
+    <app-experience-card [exp]="e" [mode]="mode"></app-experience-card>
+  }
+} @else {
+  <p>Aucune expérience pour le moment.</p>
+}

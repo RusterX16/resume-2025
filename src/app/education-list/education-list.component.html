@@ -1,0 +1,7 @@
+@if (list.length) {
+  @for (e of list; track $index) {
+    <app-education-card [education]="e" [mode]="mode"></app-education-card>
+  }
+} @else {
+  <p>Aucune formation pour le moment.</p>
+}
