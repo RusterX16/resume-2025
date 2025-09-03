@@ -6,6 +6,6 @@ export interface EducationItem {
   start: Date | string;
   end?: Date | string | null;
   description?: string;
-  subjects?: string[];
+  subjects: string[];
   featured?: boolean;
 }

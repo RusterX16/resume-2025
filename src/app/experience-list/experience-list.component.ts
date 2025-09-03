@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
-import { ExperienceCardComponent } from "./experience-card/experience-card.component";
 import { ExperienceItem } from '../models/experience.model';
+import { CardComponent } from '../shared/card/card.component';
 
 @Component({
   selector: 'app-experience-list',
-  imports: [ExperienceCardComponent],
+  imports: [CardComponent],
   templateUrl: './experience-list.component.html',
   styleUrl: './experience-list.component.scss'
 })
 export class ExperienceListComponent {
 
-  mode: 'compact' | 'detailed' = 'compact';
+  toggleView() {
+    this.mode = this.mode === 'compact' ? 'detailed' : 'compact';
+  }
+
+  mode: 'compact' | 'detailed' = 'detailed';
   experiences: ExperienceItem[] = [
     {
-      role: "Ingénieur d’études",
+      role: "Ingénieur d'études",
       company: "Spirica",
       location: "Paris, France",
       contractType: "Alternance",

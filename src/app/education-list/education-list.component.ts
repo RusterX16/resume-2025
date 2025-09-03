@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { EducationItem } from '../models/education.model';
-import { EducationCardComponent } from './education-card/education-card.component';
+import { CardComponent } from '../shared/card/card.component';
 
 @Component({
   selector: 'app-education-list',
-  imports: [EducationCardComponent],
+  imports: [CardComponent],
   templateUrl: './education-list.component.html',
   styleUrl: './education-list.component.scss'
 })
@@ -20,7 +20,7 @@ export class EducationListComponent {
       start: new Date(2022, 9, 5),
       end: new Date(2025, 8, 30),
       description: "Majeur Software Engineering",
-      subjects: ["Programmation", "Architecture", "Machine Learning", "UI/UX", "DevOps"],
+      subjects: ["FullStack", "Architecture", "UI/UX", "DevOps", "Auto-Entrepreunariat"],
       featured: true
     },
     {

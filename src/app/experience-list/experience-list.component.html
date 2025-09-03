@@ -1,6 +1,17 @@
-@if (list.length) {
+<button (click)="toggleView()">Toggle</button>
+
+  @if (list.length) {
   @for (e of list; track $index) {
-    <app-experience-card [exp]="e" [mode]="mode"></app-experience-card>
+    <card
+      [title]="e.role"
+      [badge]="e.contractType"
+      [meta]="e.company + ' — ' + e.location"
+      [description]="e.description"
+      [tags]="e.stack ?? []"
+      [start]="e.start"
+      [end]="e.end"
+      [mode]="mode">
+    </card>
   }
 } @else {
   <p>Aucune expérience pour le moment.</p>

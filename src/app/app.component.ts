@@ -4,7 +4,10 @@ import { EducationListComponent } from './education-list/education-list.componen
 
 @Component({
   selector: 'app-root',
-  imports: [ExperienceListComponent, EducationListComponent],
+  imports: [
+    ExperienceListComponent,
+    EducationListComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

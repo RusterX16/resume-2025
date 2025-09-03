@@ -1,6 +1,15 @@
 @if (list.length) {
   @for (e of list; track $index) {
-    <app-education-card [education]="e" [mode]="mode"></app-education-card>
+    <card
+      [title]="e.degree"
+      [badge]="e.level"
+      [meta]="e.school + ' — ' + e.location"
+      [description]="e.description"
+      [tags]="e.subjects"
+      [start]="e.start"
+      [end]="e.end"
+      [mode]="mode">
+    </card>
   }
 } @else {
   <p>Aucune formation pour le moment.</p>
