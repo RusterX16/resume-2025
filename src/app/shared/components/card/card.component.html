@@ -29,6 +29,7 @@
 
   <div class="dates">
     <div class="end">{{ end ? (end | date:'LLL yyyy') : 'Présent' }}</div>
+    <div class="duration">{{ start | duration:end }}</div>
     <div class="duration-line"></div>
     <div class="start">{{ start | date:'LLL yyyy' }}</div>
   </div>

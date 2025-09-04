@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ExperienceItem } from '../models/experience.model';
-import { CardComponent } from '../shared/card/card.component';
+import { CardComponent } from '../shared/components/card/card.component';
 
 @Component({
   selector: 'app-experience-list',
@@ -21,8 +21,8 @@ export class ExperienceListComponent {
       company: "Spirica",
       location: "Paris, France",
       contractType: "Alternance",
-      start: new Date(2024, 9, 2),
-      end: new Date(2025, 8, 30),
+      start: new Date(2024, 8, 2),
+      end: new Date(2025, 7, 30),
       stack: ["Jakarta EE", "PrimeFaces", "Maven", "PostgreSQL", "Git"],
       description: "Conception et développement d'un module de gestion de questionnaires produits structurés.",
       featured: true
@@ -32,8 +32,8 @@ export class ExperienceListComponent {
       company: "Equativ",
       location: "Paris, France",
       contractType: "Alternance",
-      start: new Date(2022, 9, 19),
-      end: new Date(2024, 8, 30),
+      start: new Date(2022, 8, 19),
+      end: new Date(2024, 7, 30),
       stack: ["Angular", "NgRx", "C#", "SQL Server", "Git"],
       description: "Développement d'une application de gestion de campagnes publicitaires.",
       featured: true
@@ -43,8 +43,8 @@ export class ExperienceListComponent {
       company: "Nameshield",
       location: "Angers, France",
       contractType: "Stage",
-      start: new Date(2022, 6, 6),
-      end: new Date(2022, 8, 19),
+      start: new Date(2022, 5, 6),
+      end: new Date(2022, 7, 19),
       stack: ["Java", "JUnit", "PostgreSQL", "Gradle", "Mercurial"],
       description: "Assistance technique et migration de frameworks sur une application de sécurisation de noms de domaine.",
       featured: true
@@ -54,8 +54,8 @@ export class ExperienceListComponent {
       company: "Excelvente",
       location: "Nantes, France",
       contractType: "Stage",
-      start: new Date(2021, 4, 12),
-      end: new Date(2021, 6, 18),
+      start: new Date(2021, 3, 12),
+      end: new Date(2021, 5, 18),
       stack: ["WordPress"],
       description: "Conception et mise en ligne de sites vitrines sous WordPress (thèmes, plugins, intégration)."
     },
@@ -64,8 +64,8 @@ export class ExperienceListComponent {
       company: "Formplast",
       location: "Beaucouzé, France",
       contractType: "CDD",
-      start: new Date(2019, 7, 29),
-      end: new Date(2019, 8, 16),
+      start: new Date(2019, 6, 29),
+      end: new Date(2019, 7, 16),
       stack: [],
       description: "Opérations sur ligne de fabrication, respect des procédures qualité, horaires de nuit."
     }

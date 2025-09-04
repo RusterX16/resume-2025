@@ -1,6 +1,6 @@
 <button (click)="toggleView()">Toggle</button>
 
-  @if (list.length) {
+@if (list.length) {
   @for (e of list; track $index) {
     <card
       [title]="e.role"

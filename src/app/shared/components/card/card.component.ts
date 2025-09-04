@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { DurationPipe } from "../../pipes/duration/duration.pipe";
 
 @Component({
   selector: 'card',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe, DurationPipe],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })

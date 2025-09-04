@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EducationItem } from '../models/education.model';
-import { CardComponent } from '../shared/card/card.component';
+import { CardComponent } from '../shared/components/card/card.component';
 
 @Component({
   selector: 'app-education-list',
@@ -10,6 +10,10 @@ import { CardComponent } from '../shared/card/card.component';
 })
 export class EducationListComponent {
 
+  toggleView() {
+    this.mode = this.mode === 'compact' ? 'detailed' : 'compact';
+  }
+
   mode: 'detailed' | 'compact' = 'detailed';
   educations: EducationItem[] = [
     {
@@ -17,8 +21,8 @@ export class EducationListComponent {
       school: "ESIEA",
       location: "Paris, France",
       level: "Bac+5",
-      start: new Date(2022, 9, 5),
-      end: new Date(2025, 8, 30),
+      start: new Date(2022, 8, 5),
+      end: new Date(2025, 7, 30),
       description: "Majeur Software Engineering",
       subjects: ["FullStack", "Architecture", "UI/UX", "DevOps", "Auto-Entrepreunariat"],
       featured: true
@@ -28,21 +32,21 @@ export class EducationListComponent {
       school: "IUT de Montpellier-Sète",
       location: "Montpellier, France",
       level: "Bac+2",
-      start: new Date(2021, 9, 13),
-      end: new Date(2022, 8, 19),
+      start: new Date(2021, 8, 13),
+      end: new Date(2022, 7, 19),
       subjects: ["Programmation", "Base de données", "Réseau", "Système"],
-      featured: false
+      featured: true
     },
     {
       degree: "DUT Génie Electrique Informatique Industrielle",
       school: "IUT de Nantes-Carquefou",
       location: "Carquefou, France",
       level: "Bac+2",
-      start: new Date(2019, 9, 2),
-      end: new Date(2021, 6, 18),
+      start: new Date(2019, 8, 2),
+      end: new Date(2021, 5, 18),
       description: "Spe. Systèmes Informatiques & Numériques",
       subjects: ["Physique", "Electronique", "Energie", "Logique"],
-      featured: false
+      featured: true
     }
   ];
 
