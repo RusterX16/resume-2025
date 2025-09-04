@@ -35,7 +35,7 @@ export class ExperienceListComponent {
       start: new Date(2022, 8, 19),
       end: new Date(2024, 7, 30),
       stack: ["Angular", "NgRx", "C#", "SQL Server", "Git"],
-      description: "Développement d'une application de gestion de campagnes publicitaires.",
+      description: "Développement d'une application de gestion de campagnes publicitaires en ligne.",
       featured: true
     },
     {
@@ -57,7 +57,7 @@ export class ExperienceListComponent {
       start: new Date(2021, 3, 12),
       end: new Date(2021, 5, 18),
       stack: ["WordPress"],
-      description: "Conception et mise en ligne de sites vitrines sous WordPress (thèmes, plugins, intégration)."
+      description: "Conception et mise en ligne de sites vitrines sous WordPress."
     },
     {
       role: "Opérateur de production",

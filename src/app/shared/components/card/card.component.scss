@@ -1,29 +1,26 @@
-/* ======================
-   Card (Grid) — timeline à droite, points aux extrémités, durée centrée
-   ====================== */
 .card {
-  /* Vars (puissances de 2) */
-  --dates-w: 128px;   /* 128 au lieu de 120 */
-  --tl-w: 16px;       /* 16 au lieu de 12 */
-  --line-w: 2px;      /* épaisseur barre */
-  --dates-gap: 8px;   /* écart texte <-> barre */
+  --dates-w: 128px;
+  --tl-w: 16px;
+  --line-w: 2px;
+  --dates-gap: 4px;
 
-  /* Layout & box */
   display: grid;
   grid-template-columns: 1fr var(--dates-w);
   gap: 16px;
   align-items: stretch;
-
   background: #fff;
   border: 1px solid #d1d5db;
-  box-shadow: 0 2px 8px rgba(15,23,42,.06), 0 1px 2px rgba(0,0,0,.04); /* 8 au lieu de 10 */
+  box-shadow: 0 2px 8px rgba(15,23,42,.06), 0 1px 2px rgba(0,0,0,.04);
   border-radius: 8px;
-  padding: 16px;       /* 16 au lieu de 12/14 */
+  padding: 12px;
   margin: 8px;
 
-  .body { min-width: 0; }
+  .body {
+    min-width: 0;
+    display: grid;
+    gap: 4px;
+  }
 
-  /* --- Titre + badge --- */
   .role-line {
     display: flex;
     align-items: center;
@@ -47,13 +44,10 @@
     }
   }
 
-  /* --- Meta (texte simple) --- */
   .meta {
-    margin-top: 4px;   /* 4 au lieu de 2 */
     font-size: .72rem;
     color: #6b7280;
     font-weight: 500;
-
     padding: 0;
     background: transparent;
     border: 0;
@@ -62,7 +56,6 @@
     .sep { opacity: .55; }
   }
 
-  /* Localisation (optionnelle) */
   .loc {
     display: inline-flex;
     align-items: center;
@@ -73,9 +66,7 @@
   }
   .loc::before { content: "📍"; line-height: 1; }
 
-  /* --- Description --- */
   .desc {
-    margin-top: 8px;
     color: #374151;
     font-size: .78rem;
     line-height: 1.3;
@@ -84,21 +75,21 @@
   .desc.compact {
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin-top: 4px;
   }
 
-  /* --- Tags --- */
   .stack {
-    margin-top: 8px;   /* 8 au lieu de 10 */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 
     .tag {
       display: inline-block;
       font-size: .62rem;
       line-height: 1;
-      padding: 4px 8px;                     /* 4/8 au lieu de 6/8 */
-      margin: 0 8px 8px 0;                  /* 8 au lieu de 6 */
+      padding: 4px 8px;
       border-radius: 8px;
       background: #eff6ff;
       border: 1px solid #dbeafe;
@@ -112,11 +103,10 @@
     }
   }
 
-  /* --- Dates (timeline à droite) --- */
   .dates {
     display: grid;
     grid-template-columns: 1fr var(--tl-w);
-    grid-template-rows: min-content 1fr min-content; /* end / durée / start */
+    grid-template-rows: min-content 1fr min-content;
     align-items: center;
     column-gap: var(--dates-gap);
     font-weight: 600;
@@ -130,10 +120,9 @@
       text-align: right;
       justify-self: end;
       align-self: center;
-      padding: 2px 0;
       white-space: nowrap;
     }
-    .end   { grid-row: 1; }
+    .end { grid-row: 1; }
     .start { grid-row: 3; }
 
     .duration {
@@ -141,7 +130,6 @@
       grid-row: 2;
       align-self: center;
       justify-self: end;
-      margin-right: calc(var(--dates-gap) + 2px);
       font-size: .65rem;
       font-weight: 500;
       color: #6b7280;
@@ -157,7 +145,6 @@
       background: linear-gradient(to bottom, #d1d5db, #e5e7eb);
       border-radius: 2px;
       position: relative;
-      margin: 0;
     }
     .duration-line::before,
     .duration-line::after {
@@ -165,26 +152,23 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      width: 8px; height: 8px;           /* 8 au lieu de 10 */
+      width: 8px; height: 8px;
       border-radius: 50%;
       background: #374151;
       border: 2px solid #fff;
-      box-shadow: 0 1px 2px rgba(0,0,0,.15); /* 2 au lieu de 3 */
+      box-shadow: 0 1px 2px rgba(0,0,0,.15);
     }
     .duration-line::before { top: 0; }
-    .duration-line::after  { bottom: 0; }
+    .duration-line::after { bottom: 0; }
   }
 
-  /* ======================
-     Mode Compact
-     ====================== */
   &.compact {
-    --dates-w: 96px;   /* multiple de 16 */
-    --tl-w: 16px;      /* identique pour régularité */
+    --dates-w: 96px;
+    --tl-w: 16px;
     --line-w: 2px;
 
-    gap: 8px;          /* 8 au lieu de 10 */
-    padding: 8px 16px; /* 8/16 au lieu de 8/10 */
+    gap: 8px;
+    padding: 8px 16px;
 
     .role-line { gap: 8px; }
     .role-line .role { font-size: .78rem; }
@@ -193,14 +177,14 @@
     .meta { font-size: .68rem; }
     .desc { font-size: .70rem; }
 
-    .stack { margin-top: 8px; }
-    .stack .tag { font-size: .58rem; padding: 4px 8px; margin: 0 8px 8px 0; }
+    .stack { gap: 8px; }
+    .stack .tag { font-size: .58rem; padding: 4px 8px; }
 
     .dates {
       font-size: .65rem;
-      .duration { font-size: .62rem; margin-right: calc(var(--dates-gap) + 2px); }
+      .duration { font-size: .62rem; }
       .duration-line::before,
-      .duration-line::after { width: 8px; height: 8px; border-width: 2px; } /* 8/2 */
+      .duration-line::after { width: 8px; height: 8px; border-width: 2px; }
     }
   }
 }

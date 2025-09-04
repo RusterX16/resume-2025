@@ -10,9 +10,9 @@
     <div class="meta">{{ meta }}</div>
 
     @if (description) {
-      <p class="desc" [class.compact]="mode === 'compact'">
+      <div class="desc" [class.compact]="mode === 'compact'">
         {{ description }}
-      </p>
+      </div>
     }
 
     @if (tags.length) {

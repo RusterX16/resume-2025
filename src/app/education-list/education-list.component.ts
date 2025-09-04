@@ -28,7 +28,7 @@ export class EducationListComponent {
       featured: true
     },
     {
-      degree: "DUT Informatique",
+      degree: "DUT Informatique (Année spéciale)",
       school: "IUT de Montpellier-Sète",
       location: "Montpellier, France",
       level: "Bac+2",
@@ -47,6 +47,17 @@ export class EducationListComponent {
       description: "Spe. Systèmes Informatiques & Numériques",
       subjects: ["Physique", "Electronique", "Energie", "Logique"],
       featured: true
+    },
+    {
+      degree: "Baccalauréat Science & Technologie de l'Industrie et du Développement Durable",
+      school: "Lycée Saint Aubin La Salle",
+      location: "Angers, France",
+      level: "Bac",
+      start: new Date(2017, 7, 4),
+      end: new Date(2019, 5, 1), // Mauvais jour
+      description: "Spe. Systèmes d'Information et Numérique",
+      subjects: ["Mathématiques", "Physique", "Electronique", "Informatique"],
+      featured: false
     }
   ];
 
