@@ -1,41 +1,19 @@
-/* ===== Page A4 ===== */
 .resume{
-  --aside-w: 232px;
-
-  display: grid;
-  grid-template-columns: var(--aside-w) 1fr;
-  grid-template-rows: auto auto auto;     /* header, exp, edu */
-  grid-template-areas:
-    "aside  header"
-    "aside  exp"
-    "aside  edu";
-  gap: 0 8px;                              /* 0 vertical, 8px horizontal */
-  align-items: stretch;                    /* items étirés en hauteur */
-
+  display: flex;
+  flex-direction: row;
   width: 210mm;
   height: 297mm;
   margin: 8px auto;
   background: #fff;
-  border: 1px solid #e5e7eb;
   box-shadow: 0 2px 8px rgba(15,23,42,.06), 0 1px 2px rgba(0,0,0,.04);
-}
 
-/* Place les enfants dans les zones */
-app-aside           { grid-area: aside;  display: block; align-self: stretch; }
-app-header          { grid-area: header; display: block; }
-app-experience-list { grid-area: exp;    display: block; }
-app-education-list  { grid-area: edu;    display: block; }
+  app-aside {
+    width: 38%;
+  }
 
-/* Neutralise les marges des conteneurs “card-like” dans la grille */
-.resume app-header .header,
-.resume app-aside  .aside,
-.resume .card { margin: 0; }
-
-@media print{
-  .resume{
-    --aside-w: 208px;
+  .body {
+    display: flex;
+    flex-direction: column;
     gap: 8px;
-    padding: 16px;
-    box-shadow: none;
   }
 }

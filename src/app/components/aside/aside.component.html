@@ -1,5 +1,4 @@
 <section class="aside">
-  <!-- Infos -->
   @if (infos.length) {
     <section class="section">
       <h4 class="h">
@@ -14,12 +13,12 @@
         @for (i of infos; track i.text) {
           @if (i.href) {
             <a class="row" [href]="i.href" target="_blank" rel="noopener noreferrer">
-              <span class="icon">{{ i.icon || '•' }}</span>
+              <span class="icon">{{ i.icon }}</span>
               <span class="txt">{{ i.text }}</span>
             </a>
           } @else {
             <div class="row">
-              <span class="icon">{{ i.icon || '•' }}</span>
+              <span class="icon">{{ i.icon }}</span>
               <span class="txt">{{ i.text }}</span>
             </div>
           }
@@ -28,7 +27,6 @@
     </section>
   }
 
-  <!-- Langues -->
   @if (languages.length) {
     <section class="section">
       <h4 class="h">
@@ -50,7 +48,6 @@
     </section>
   }
 
-  <!-- Compétences -->
   @if (groupedTech.length) {
     <section class="section">
       <h4 class="h">
@@ -76,7 +73,6 @@
     </section>
   }
 
-  <!-- Logiciels -->
   @if (tools.length) {
     <section class="section">
       <h4 class="h">
@@ -95,13 +91,12 @@
     </section>
   }
 
-  <!-- Centres d’intérêt -->
   @if (interests.length) {
     <section class="section">
       <h4 class="h">
         <span class="left">
           <span class="ico material-symbols-rounded" aria-hidden="true">interests</span>
-          <span class="t">Centres d’intérêt</span>
+          <span class="t">Centres d'intérêt</span>
         </span>
         <span class="rule" aria-hidden="true"></span>
       </h4>
@@ -114,7 +109,6 @@
     </section>
   }
 
-  <!-- Réseaux -->
   <section class="section">
     <h4 class="h">
       <span class="left">

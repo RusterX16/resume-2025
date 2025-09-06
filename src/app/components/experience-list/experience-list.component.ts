@@ -56,7 +56,7 @@ export class ExperienceListComponent {
       contractType: "Stage",
       start: new Date(2021, 3, 12),
       end: new Date(2021, 5, 18),
-      stack: ["WordPress"],
+      stack: [],
       description: "Conception et mise en ligne de sites vitrines sous WordPress.",
       featured: true
     },
@@ -68,7 +68,7 @@ export class ExperienceListComponent {
       start: new Date(2019, 6, 29),
       end: new Date(2019, 7, 16),
       stack: [],
-      description: "Opérations sur ligne de fabrication, respect des procédures qualité, horaires de nuit.",
+      description: "Opérations sur ligne de fabrication industrielle en horaires de nuit.",
       featured: true
     }
   ];

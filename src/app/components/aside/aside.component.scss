@@ -1,13 +1,4 @@
-/* Étire l’aside dans la grille A4 si tu utilises .resume */
-.resume app-aside {
-  align-self: stretch;
-}
-
-/* =============================== ASIDE =============================== */
 .aside {
-  position: sticky;
-  top: 16px;
-
   background: var(--card-bg, #fff);
   border: 1px solid var(--card-bd, #e5e7eb);
   border-radius: var(--card-radius, 8px);
@@ -23,13 +14,11 @@
   min-height: 100%;
   justify-content: space-between;
 
-  /* ===== Sections ===== */
   .section {
     display: grid;
     gap: 12px;
   }
 
-  /* ===== Titres de section (avec règle à droite fournie par le markup .rule) ===== */
   .section .h {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -67,7 +56,6 @@
     border-radius: 1px;
   }
 
-  /* ===== Infos ===== */
   .list {
     display: grid;
     gap: 10px;
@@ -98,7 +86,6 @@
     overflow-wrap: anywhere;
   }
 
-  /* ===== Langues ===== */
   .langs {
     display: grid;
     gap: 8px;
