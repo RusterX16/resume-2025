@@ -17,11 +17,8 @@
 
     @if (tags.length) {
       <div class="stack">
-        @for (t of (mode === 'compact' ? tags.slice(0,3) : tags); track t) {
+        @for (t of tags; track t) {
           <span class="tag">{{ t }}</span>
-        }
-        @if (mode === 'compact' && tags.length > 3) {
-          <span class="tag more">+{{ tags.length - 3 }}</span>
         }
       </div>
     }

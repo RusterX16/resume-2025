@@ -1,4 +1,8 @@
-<button (click)="toggleView()">Toggle</button>
+<app-section-title
+  title="Formations"
+  subtitle="Diplômes et certifications"
+  icon="school"
+></app-section-title>
 
 @if (list.length) {
   @for (e of list; track $index) {

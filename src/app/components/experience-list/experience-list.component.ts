@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { ExperienceItem } from '../models/experience.model';
-import { CardComponent } from '../shared/components/card/card.component';
+import { ExperienceItem } from '../../models/experience.model';
+import { CardComponent } from '../../shared/components/card/card.component';
+import { SectionTitleComponent } from "../section-title/section-title.component";
 
 @Component({
   selector: 'app-experience-list',
-  imports: [CardComponent],
+  imports: [
+    CardComponent,
+    SectionTitleComponent
+  ],
   templateUrl: './experience-list.component.html',
   styleUrl: './experience-list.component.scss'
 })
 export class ExperienceListComponent {
 
-  toggleView() {
-    this.mode = this.mode === 'compact' ? 'detailed' : 'compact';
-  }
-
-  mode: 'compact' | 'detailed' = 'detailed';
+  mode: 'compact' | 'detailed' = 'compact';
   experiences: ExperienceItem[] = [
     {
       role: "Ingénieur d'études",
@@ -57,7 +57,8 @@ export class ExperienceListComponent {
       start: new Date(2021, 3, 12),
       end: new Date(2021, 5, 18),
       stack: ["WordPress"],
-      description: "Conception et mise en ligne de sites vitrines sous WordPress."
+      description: "Conception et mise en ligne de sites vitrines sous WordPress.",
+      featured: true
     },
     {
       role: "Opérateur de production",
@@ -67,7 +68,8 @@ export class ExperienceListComponent {
       start: new Date(2019, 6, 29),
       end: new Date(2019, 7, 16),
       stack: [],
-      description: "Opérations sur ligne de fabrication, respect des procédures qualité, horaires de nuit."
+      description: "Opérations sur ligne de fabrication, respect des procédures qualité, horaires de nuit.",
+      featured: true
     }
   ];
 

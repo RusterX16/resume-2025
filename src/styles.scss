@@ -1,3 +1,63 @@
+:root {
+  /* === Echelle (puissances de 2) === */
+  --sp-1: 2px;
+  --sp-2: 4px;
+  --sp-4: 8px;
+  --sp-8: 16px;
+  --sp-16: 32px;
+
+  /* === Surfaces & bordures === */
+  --surface: #ffffff;
+  --border: #e5e7eb;
+  --hairline: #f1f5f9;
+  --radius: 8px;
+  --radius-pill: 999px;
+
+  /* === Typo (teintes) === */
+  --text-900: #111827; /* titre */
+  --text-700: #374151; /* corps */
+  --text-600: #475569; /* sous-info */
+  --text-500: #64748b; /* secondaire */
+
+  /* === Ombres === */
+  --shadow-soft: 0 2px 8px rgba(15, 23, 42, .06), 0 1px 2px rgba(0, 0, 0, .04);
+
+  /* === Timeline (cards) === */
+  --tl-line-w: 2px;
+  --tl-line-from: #d1d5db;
+  --tl-line-to:   #e5e7eb;
+  --tl-dot: #374151;
+  --tl-dot-ring: #ffffff;
+
+  /* === Chips / Tags (défauts) === */
+  --chip-bg: #f8fafc;
+  --chip-bd: #e5e7eb;
+  --chip-fg: #0f172a;
+  --chip-dot: currentColor;
+
+  /* variantes utilisées par l’aside */
+  --chip-blue-bg:   #dbeafe;
+  --chip-blue-bd:   #bfdbfe;
+  --chip-blue-fg:   #1e40af;
+  --chip-blue-dot:  #1d4ed8;
+
+  --chip-purple-bg: #f3e8ff;
+  --chip-purple-bd: #e9d5ff;
+  --chip-purple-fg: #6b21a8;
+  --chip-purple-dot:#7c3aed;
+
+  --chip-gray-bg:   #f1f5f9;
+  --chip-gray-bd:   #e5e7eb;
+  --chip-gray-fg:   #334155;
+  --chip-gray-dot:  #64748b;
+
+  /* === Carte (header, aside, card) === */
+  --card-bg: var(--surface);
+  --card-bd: var(--border);
+  --card-radius: var(--radius);
+  --card-shadow: var(--shadow-soft);
+}
+
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: 'Rubik', sans-serif;
@@ -28,7 +88,7 @@ body {
     1000px 750px #fff,
     1400px 100px #fff,
     1700px 400px #fff,
-    1900px 550px #fff; /* duplique / rajoute autant que tu veux */
+    1900px 550px #fff;
 }
 
 .stars2 {

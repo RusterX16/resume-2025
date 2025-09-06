@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { EducationItem } from '../models/education.model';
-import { CardComponent } from '../shared/components/card/card.component';
+import { EducationItem } from '../../models/education.model';
+import { CardComponent } from '../../shared/components/card/card.component';
+import { SectionTitleComponent } from "../section-title/section-title.component";
 
 @Component({
   selector: 'app-education-list',
-  imports: [CardComponent],
+  imports: [
+    CardComponent,
+    SectionTitleComponent
+  ],
   templateUrl: './education-list.component.html',
   styleUrl: './education-list.component.scss'
 })
 export class EducationListComponent {
 
-  toggleView() {
-    this.mode = this.mode === 'compact' ? 'detailed' : 'compact';
-  }
-
-  mode: 'detailed' | 'compact' = 'detailed';
+  mode: 'detailed' | 'compact' = 'compact';
   educations: EducationItem[] = [
     {
       degree: "Ecole d'Ingénieurs Informatique",
@@ -28,12 +28,13 @@ export class EducationListComponent {
       featured: true
     },
     {
-      degree: "DUT Informatique (Année spéciale)",
+      degree: "DUT Informatique",
       school: "IUT de Montpellier-Sète",
       location: "Montpellier, France",
       level: "Bac+2",
       start: new Date(2021, 8, 13),
       end: new Date(2022, 7, 19),
+      description: "Année spéciale (DUT en 1 an)",
       subjects: ["Programmation", "Base de données", "Réseau", "Système"],
       featured: true
     },
@@ -49,7 +50,7 @@ export class EducationListComponent {
       featured: true
     },
     {
-      degree: "Baccalauréat Science & Technologie de l'Industrie et du Développement Durable",
+      degree: "Baccalauréat Technologique - Science & Technologie de l'Industrie et du Développement Durable",
       school: "Lycée Saint Aubin La Salle",
       location: "Angers, France",
       level: "Bac",
@@ -57,7 +58,7 @@ export class EducationListComponent {
       end: new Date(2019, 5, 1), // Mauvais jour
       description: "Spe. Systèmes d'Information et Numérique",
       subjects: ["Mathématiques", "Physique", "Electronique", "Informatique"],
-      featured: false
+      featured: true
     }
   ];
 

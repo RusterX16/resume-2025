@@ -1,7 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'duration', standalone: true, pure: true })
+@Pipe({
+  name: 'duration',
+  standalone: true,
+  pure: true
+})
 export class DurationPipe implements PipeTransform {
+
   transform(startIn: Date | string | number, endIn?: Date | string | number | null): string {
     const s = this.toDate(startIn);
     const e = endIn != null && endIn !== '' ? this.toDate(endIn) : new Date();
@@ -46,6 +51,7 @@ export class DurationPipe implements PipeTransform {
     if (this.addMonthsClamped(s, m) > e) m--;
     return Math.max(0, m);
   }
+
   private addMonthsClamped(d: Date, months: number): Date {
     const y = d.getFullYear();
     const m = d.getMonth() + months;
@@ -53,6 +59,7 @@ export class DurationPipe implements PipeTransform {
     const day = Math.min(d.getDate(), last);
     return new Date(y, m, day, 12);
   }
+
   private toDate(v: Date | string | number): Date | null {
     const d = v instanceof Date ? v : new Date(v);
     return isNaN(+d) ? null : d;
