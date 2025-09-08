@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { DurationPipe } from "../../pipes/duration/duration.pipe";
+import { DurationPipe } from '../../pipes/duration/duration.pipe';
 
 @Component({
   selector: 'card',
@@ -10,7 +10,6 @@ import { DurationPipe } from "../../pipes/duration/duration.pipe";
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-
   @Input() title!: string;
   @Input() badge?: string | null;
 
@@ -21,6 +20,4 @@ export class CardComponent {
 
   @Input() start!: Date | string | number;
   @Input() end?: Date | string | number | null;
-
-  @Input() mode: 'detailed' | 'compact' = 'detailed';
 }

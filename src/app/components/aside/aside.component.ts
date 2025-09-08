@@ -26,25 +26,30 @@ export class AsideComponent {
 
   // ——— Langues naturelles (liste simple)
   languages = [
-    { name: 'Français', percent: 100, note: 'Natif' },
-    { name: 'Anglais',  percent: 85,  note: 'TOEIC' },
-    { name: 'Allemand', percent: 55,  note: '7 ans' },
-    { name: 'Espagnol', percent: 35,  note: '3 ans' },
+    { name: 'Français', note: 'Natif' },
+    { name: 'Anglais',  note: 'TOEIC 840/990' },
+    { name: 'Allemand', note: 'Notions' },
+    { name: 'Espagnol', note: 'Notions' },
   ];
 
   // ——— Logiciels / centres d’intérêt / soft skills
-  tools: string[] = ['Suite Adobe', 'Suite Office', 'Suite JetBrains', 'VS Code', 'Figma', 'Audacity', 'Notion'];
-  interests: string[] = ['Photographie', 'Claviers Custom', 'Voix off', 'Muay Thaï', 'Jeux vidéo', 'Voyages'];
+  tools: string[] = ['Suite Adobe', 'Suite Office', 'Suite JetBrains', 'VS Code', 'Figma', 'Vegas Pro', 'Cinema 4D', 'Audacity', 'Notion'];
+  interests: string[] = ['Photographie', 'Montage vidéo', 'Voix off', 'Tennis', 'Muay Thaï', 'Jeux vidéo', 'Claviers custom'];
 
   // ——— Compétences techniques (source)
   tech: TechGroup[] = [
     // OOP supprimé → Back-end direct (avec Python dedans)
     { category: 'Front-end', items: [
+      { label: 'HTML',       kind: 'lang' },
+      { label: 'CSS',        kind: 'lang' },
       { label: 'JavaScript', kind: 'lang' },
       { label: 'TypeScript', kind: 'lang' },
       { label: 'Angular',    kind: 'fw' },
       { label: 'Vue',        kind: 'fw' },
+      { label: 'RxJS',       kind: 'fw' },
       { label: 'NgRx',       kind: 'fw' },
+      { label: 'Jest',       kind: 'tool' },
+      { label: 'Cypress',    kind: 'tool' },
     ]},
     { category: 'Back-end', items: [
       { label: 'Java',   kind: 'lang' },
@@ -53,10 +58,13 @@ export class AsideComponent {
       { label: 'Node.js', kind: 'fw' },
       { label: 'Spring',   kind: 'fw' },
       { label: 'Jakarta EE', kind: 'fw' },
+      { label: 'JUnit',     kind: 'tool' },
     ]},
     { category: 'Outillage', items: [
-      { label: 'SQL',    kind: 'tool' },
+      { label: 'SQL',    kind: 'lang' },
+      { label: 'SonarLint', kind: 'tool' },
       { label: 'Maven', kind: 'tool' },
+      { label: 'Docker', kind: 'tool' },
       { label: 'Git',   kind: 'tool' },
       { label: 'Linux', kind: 'tool' },
     ]},

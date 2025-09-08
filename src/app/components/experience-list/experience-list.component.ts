@@ -56,7 +56,7 @@ export class ExperienceListComponent {
       contractType: "Stage",
       start: new Date(2021, 3, 12),
       end: new Date(2021, 5, 18),
-      stack: [],
+      stack: ["WordPress"],
       description: "Conception et mise en ligne de sites vitrines sous WordPress.",
       featured: true
     },

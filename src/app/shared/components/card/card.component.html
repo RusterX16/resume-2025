@@ -1,4 +1,4 @@
-<div class="card" [class.compact]="mode === 'compact'">
+<div class="card">
   <div class="body">
     <div class="role-line">
       <h3 class="role">{{ title }}</h3>
@@ -10,7 +10,7 @@
     <div class="meta">{{ meta }}</div>
 
     @if (description) {
-      <div class="desc" [class.compact]="mode === 'compact'">
+      <div class="desc">
         {{ description }}
       </div>
     }

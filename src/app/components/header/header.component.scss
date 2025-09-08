@@ -1,11 +1,21 @@
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 16px 8px 0 8px;
-  gap: 4px;
 
-  .name {
-    margin-block-start: 0;
-    margin-block-end: 0;
+  .id {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .name {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+  }
+
+  .qrcode {
+    margin-right: 8px;
   }
 }
